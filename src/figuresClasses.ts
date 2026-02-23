@@ -27,7 +27,7 @@ export class Triangle implements Figure {
     this.c = c;
 
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('throws an error');
+      throw new Error('Side lengths must be > 0');
     }
 
     const sides = [a, b, c].sort((x, y) => x - y);
@@ -59,7 +59,7 @@ export class Circle implements Figure {
     this.radius = radius;
 
     if (radius <= 0) {
-      throw new Error('throws an error');
+      throw new Error('Radius must be > 0');
     }
   }
 
@@ -85,7 +85,7 @@ export class Rectangle implements Figure {
     this.height = height;
 
     if (width <= 0 || height <= 0) {
-      throw new Error('throws an error');
+      throw new Error('Width and height must be > 0');
     }
   }
 
